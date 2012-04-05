@@ -1,0 +1,20 @@
+= MultiInputLine
+
+Simplify several input_fields in one line with simple_form, adds a 'as: :multi' option.
+
+you can use it like this:
+<pre>
+  <%= simple_form_for [:admin, :catalog, @merchant] do |f| %>
+    ...blah...
+    <%= f.input :name, required: true, as: :multi, fields: {:first_name => {}, :last_name => {placeholder: "Last Name"}} %>
+    ...
+</pre>
+
+in your Gemfile, add
+  gem 'multi_input_line', git: 'git@github.com:metaminded/multi_input_line.git'
+and add the javascript part in your .js manifest:
+  //= require multi_input_line/multi_input
+
+(c) 2012 metaminded UG http://www.metaminded.com
+
+BTW: This project rocks and uses MIT-LICENSE.
