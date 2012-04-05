@@ -1,7 +1,7 @@
 jQuery(function($){
   $('*[data-validation-error]').each(function(){
     var input = $(this);
-    var parent = input.parent("div.input");
+    var parent = input.parent("div.multi");
     wrapper = $('<div style="display: inline-block; vertical-align: top"></div>');
     input.replaceWith(wrapper);
     wrapper.append(input);
