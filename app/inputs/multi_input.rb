@@ -6,7 +6,7 @@ class MultiInput < SimpleForm::Inputs::Base
       lbl = opts.delete :label
       lbl = case lbl
       when String then lbl
-      when Symbol then @builder.object.human_attribute_name(lbl)
+      when Symbol then @builder.object.class.human_attribute_name(lbl)
       else nil
       end
       e = @builder.object.errors[name].presence.try(:join, ", ")
